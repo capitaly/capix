@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapiX</title>
+    <link rel="icon" href="/src/img/capix.png">
+    <link rel="stylesheet" href="/public/css/info.css" />
+  <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+      <div class="navbar">
+        <div class="menu">
+            
+          <h3 class="logo">CAPI<span>X</span></h3>
+          <div class="hamburger-menu">
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+    <section>
+        <div class="profile">
+            <div class="profile-img">
+                <a href="/src/index.html">
+                <img src="/src/img/profile.png" alt="">
+            </a>
+            </div>
+            <span class="name">capi</span>
+            <span class="profession">Web & Web Designer</span>
+            <div id="hireBtn" class="button">
+                <i class="bx bxs-envelope"></i>
+                <button>Message</button>
+            </div>
+        </div>
+
+  
+
+        <!-- popup box start -->
+        <div class="popup-outer">
+            <div class="popup-box">
+                <i id="close" class="bx bx-x close"></i>
+                <div class="profile-text">
+                    <img src="/src/img/profile.png" alt=""> 
+                    <div class="text">
+                        <span class="name">capi</span>
+                         <span class="profession">Web & Web Designer</span>
+                    </div>
+                </div>
+                <form action="#">
+                    <textarea spellcheck="false" placeholder="Enter your message"></textarea>
+                    <div class="button">
+                        <button id="close" class="cancel">Cancel</button>
+                        <button class="send">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-container">
+        <div class="main">
+          <header>
+            <div class="overlay">
+              <div class="inner">
+                  <h2 class="title">Who am I?</h2>
+                <p class="capi_bio">
+                  I am 16 years old and interested in coding. I like trying new software languages, I mainly interested in Node.JS and JavaScript but recently I started to a new project with HTML and CSS
+                </p>
+              </div>
+            </div>
+          </header>
+        </div>
+     
+
+    <script>
+        const section = document.querySelector("section"),
+      hireBtn = section.querySelector("#hireBtn"),
+      closeBtn = section.querySelectorAll("#close"),
+      textArea = section.querySelector("textarea");
+ 
+      hireBtn.addEventListener("click" , () =>{
+        section.classList.add("show");
+      });
+
+      closeBtn.forEach(cBtn => {
+        cBtn.addEventListener("click" , ()=>{
+            section.classList.remove("show");
+            textArea.value = "";
+        });
+      });
+    </script>
+
+<div class="links">
+    <ul>
+      <li>
+        <a href="/src/index.html" style="--i: 0.05s;">Home</a>
+      </li>
+      <li>
+        <a href="/src/about.html" style="--i: 0.1s;">About</a>
+      </li>
+      <li>
+        <a href="/src/portfolio.html" style="--i: 0.15s;">Portfolio</a>
+      </li>
+      <li>
+        <a href="#" style="--i: 0.2s;">Contact</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script src="/src/app.js"></script>
+    
+</body>
+</html>
